@@ -20,6 +20,11 @@ public abstract class Fruit : MonoBehaviour
             fallOffScreen();
             Destroy(gameObject);
         }
+
+        if(p.health < 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D player)
